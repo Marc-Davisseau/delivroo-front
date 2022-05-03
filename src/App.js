@@ -5,6 +5,18 @@ import axios from "axios";
 function App() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [counter, setCounter] = useState(0);
+let newTab=[];
+
+
+const handleClickPlus = (index) => {
+  const newCounter = [...counter];
+  newCounter[index]++;
+  setCounter(newCounter);
+}
+
+
+
 
   const fetchData = async () => {
     const response = await axios.get("https://delivroo-backend-reac.herokuapp.com/");
@@ -48,12 +60,13 @@ function App() {
 <main className="App">
 
 
-{data.categories.map(item =>(
+{data.categories.map((item,index) =>(
 <div className="main3">
               <div className="main2">
-       <div className="top">{item.name}</div>
-              {item.meals.map(item =>(
-          <div className="fiche">
+       <div key={index} className="top">{item.name}</div>
+              {item.meals.map((item, index) =>(
+          <div key={index} className="fiche"
+          onClick={()=> {handleClickPlus({index})}}>
                      <div className="text">
                 <p className="p1">{item.title}</p>
                 <p className="p2">{item.description}</p>
@@ -64,16 +77,23 @@ function App() {
                     </div>
           </div>   
             ))}
-            </div><div className="side">test</div>
+            </div>
+            <div className="side">
+
+            <div key={index} className="top">{item.name}</div>
+              {item.meals.map((item, index1,index2) =>(
+                <div>
+          <div key={index1}>{item.title}</div>
+          <div key={index2}>{counter}</div>
           </div>
-))}
-
-
-
+          ))}
+                    </div>
+          </div>   
+))}  
 </main>
-
-</div>      
-)
-}    
-
+</div>   
+  )}  
 export default App;
+
+
+  {/* {item.meals.map((item, index) =>(<div key={index}>{counter}</div>))} */}
