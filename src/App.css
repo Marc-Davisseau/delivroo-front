@@ -1,38 +1,221 @@
 .App {
-  text-align: center;
+ color: #2E3333;
+margin: 40px 0px;
+background-color: rgb(234, 14, 14);
+justify-items: center;
+width: 1220px;
+/* border : solid rgb(98, 61, 40) 10px; */
+/* margin-right: 45px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App1 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+width: 100%;
+/* border : solid rgb(49, 148, 52) 10px; */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+display: flex;
+/* flex-direction: column-reverse; */
+width: 1200px;
+justify-content: space-between;
+/* border : solid rgb(76, 0, 255) 9px; */
+margin-right: 10px;
+margin-left: 0px;
+padding-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo{
+  height: 59px;
+}
+
+.header1{
+display: flex;
+flex-direction: column;
+margin-left: 0px 50px;
+}
+
+.header2{
+  display: flex;
+/* border : solid rgb(9, 249, 21) 4px; */
+width: 350px;
+}
+
+.header2 img {
+  width: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+p{
+  color: #868A8A;
+  font-size: 19px;
+}
+
+p:hover {
+  text-decoration: underline;
+}
+
+.main{
+  /* border: solid rgb(13, 13, 74) 6px; */
+  display: flex;
+  flex-direction: row;
+background-color: rgb(97, 208, 23);
+  height: 100%;
+}
+
+
+.fiche{
+display: flex;
+justify-content: space-between;
+width: 44%;
+border-radius: 12px;
+background-color: rgb(255, 255, 255);
+padding: 15px 15px;
+margin: 10px 10px;
+}
+
+.fiche .text{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: calc(50%-700px)
 }
 
-.App-link {
-  color: #61dafb;
+.fiche .picture{
+display: flex;
+border-radius: 20px;
+background-color: rgb(255, 255, 255);
+width: 150px;
+object-fit: cover;
+align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fiche .picture img{
+  border-radius: 10px;
+width: 150px;
+height: 150px;
+object-fit: cover;
 }
+
+.side{
+width: 380px;  
+background-color: rgb(150, 128, 128);
+}
+
+.main3 {
+width: 100%;
+display: flex;
+background-color: rgb(246, 239, 239);
+
+}
+
+.main2 {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+width: calc(75%); 
+color: rgb(35, 45, 37);
+/* border: solid #1000c5 6px; */
+}
+
+.top{
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.p1{font-size: 18px;
+color: black;
+}
+.p2{font-size: 14px}
+.p3{font-size: 17px}
+
+
+@media (max-width : 1090px) {
+  .fiche {
+width: 90%;
+  }     
+}
+
+
+@media (max-width : 1260px) {
+.App1 {
+width: 1260px;
+}
+}
+
+@media (max-width : 1260px) {
+.App1 {
+justify-content: flex-start;
+width: 100vw !important;
+}}
+  
+
+
+  @media (max-width : 1260px) {
+  .header1 {
+  width: 100vw !important;
+  justify-content: flex-start;
+    }}
+
+
+
+    @media (max-width : 1260px) {
+      header  {
+      justify-content: flex-start;
+      width: 100vw !important;
+      }}
+        
+
+      @media (max-width : 1260px) {
+        .App{
+        width: 100vw !important;
+        justify-content: flex-start;
+          }}
+
+
+   @media (max-width : 850px) {
+     .App{
+       width: 100vw !important;
+  justify-content: flex-start;
+         }}
+
+
+ @media (max-width : 850px) {
+     header{
+ display: flex;
+flex-direction: column-reverse !important;        
+      }}
+      @media (max-width : 850px) {
+        .header2 img {
+height: 200px;
+width: 100%;
+    }}  
+     
+    @media (max-width : 850px) {
+      .header2  {
+width: 100%;
+ object-fit: contain;
+  }}  
+
+
+  @media (max-width : 750px) {
+    .side  {
+display: none;
+}}  
+
+   
+@media (max-width : 750px) {
+.main2 { width: 100%;
+}}  
+
+@media (max-width : 750px) {
+  .App { margin: 0rem;
+  }}  
